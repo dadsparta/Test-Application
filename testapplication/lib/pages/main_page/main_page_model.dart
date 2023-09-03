@@ -23,9 +23,10 @@ class _MainPageViewState extends State<MainPageView> {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         backgroundColor: secondColor,
+        activeColor: buttonsColor,
         items: const [
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.increase_indent)),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.settings)),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.graph_circle_fill), label: "Simulator"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.settings), label: "Settings"),
         ],
       ),
       tabBuilder: (context, index) {

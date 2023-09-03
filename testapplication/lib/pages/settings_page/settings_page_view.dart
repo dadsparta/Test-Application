@@ -28,6 +28,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
           backgroundColor: firstColor,
           children: [
             CupertinoListTile(
+              backgroundColorActivated: buttonsColor,
               backgroundColor: secondColor,
               title: const Text(
                 'About app',
@@ -38,6 +39,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               },
             ),
             CupertinoListTile(
+              backgroundColorActivated: buttonsColor,
               backgroundColor: secondColor,
               title: const Text(
                 'Rate app',
@@ -48,6 +50,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               },
             ),
             CupertinoListTile(
+              backgroundColorActivated: buttonsColor,
               backgroundColor: secondColor,
               title: const Text(
                 'Privacy police',
@@ -59,7 +62,7 @@ class _SettingsPageViewState extends State<SettingsPageView> {
             ),
             CupertinoListTile(
               backgroundColor: secondColor,
-
+              backgroundColorActivated: buttonsColor,
               title: const Text(
                 'Terms & Conditions',
                 style: TextStyle(color: textColor),
