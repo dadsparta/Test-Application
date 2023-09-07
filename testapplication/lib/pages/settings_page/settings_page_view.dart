@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testapplication/utilities/app_colors.dart';
+import 'package:testapplication/utilities/consts/app_colors.dart';
+import 'package:testapplication/utilities/consts/text_samples.dart';
+import 'package:testapplication/utilities/samples/list_tile.dart';
 
 class SettingsPageView extends StatefulWidget {
   const SettingsPageView({Key? key}) : super(key: key);
@@ -10,67 +12,25 @@ class SettingsPageView extends StatefulWidget {
 }
 
 class _SettingsPageViewState extends State<SettingsPageView> {
-  int a = 1;
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor: firstColor,
-      navigationBar: const CupertinoNavigationBar(
+      navigationBar: CupertinoNavigationBar(
         backgroundColor: secondColor,
-        middle:
-            Text("Settings", style: TextStyle(fontSize: 28, color: textColor)),
-        border: Border(bottom: BorderSide.none),
+        border: const Border(bottom: BorderSide.none),
+        middle: NavBarText(text: 'Settings'),
       ),
       child: SafeArea(
         child: CupertinoListSection.insetGrouped(
           decoration: BoxDecoration(border: Border.all(color: Colors.black)),
           backgroundColor: firstColor,
           children: [
-            CupertinoListTile(
-              backgroundColorActivated: buttonsColor,
-              backgroundColor: secondColor,
-              title: const Text(
-                'About app',
-                style: TextStyle(color: textColor),
-              ),
-              onTap: (){
-                return a++;
-              },
-            ),
-            CupertinoListTile(
-              backgroundColorActivated: buttonsColor,
-              backgroundColor: secondColor,
-              title: const Text(
-                'Rate app',
-                style: TextStyle(color: textColor),
-              ),
-              onTap: (){
-                return a++;
-              },
-            ),
-            CupertinoListTile(
-              backgroundColorActivated: buttonsColor,
-              backgroundColor: secondColor,
-              title: const Text(
-                'Privacy police',
-                style: TextStyle(color: textColor),
-              ),
-              onTap: () {
-                return a++;
-              },
-            ),
-            CupertinoListTile(
-              backgroundColor: secondColor,
-              backgroundColorActivated: buttonsColor,
-              title: const Text(
-                'Terms & Conditions',
-                style: TextStyle(color: textColor),
-              ),
-              onTap: () {
-                return a++;
-              },
-            ),
+            ListTileApp(title: 'About app',),
+            ListTileApp(title: 'Rate app'),
+            ListTileApp(title: 'Privacy police'),
+            ListTileApp(title: 'Terms & Conditions',),
           ],
         ),
       ),

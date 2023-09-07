@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:testapplication/pages/main_page/main_page_model.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -8,9 +7,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
+
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const MyHomePage(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
     );
   }
 }
@@ -26,6 +27,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MainPageView();
+    return const MainPage();
   }
 }
