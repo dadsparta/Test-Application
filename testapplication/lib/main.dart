@@ -1,14 +1,27 @@
-import 'package:firebase_remote_config/firebase_remote_config.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:testapplication/pages/main_page/main_page_model.dart';
-void main() {
+import 'package:testapplication/utilities/firebase/firebase.dart';
+
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  final remoteConfig = FirebaseRemoteConfigService();
+  String a = remoteConfig.getString(FirebaseRemoteConfigKeys.welcomeMessage);
+  if (a != "") {
+    debugPrint(a + "sss");
+  } else {
+    debugPrint("not exist");
+  }
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,

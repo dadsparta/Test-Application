@@ -26,6 +26,11 @@ class FirebaseRemoteConfigService {
       FirebaseRemoteConfigKeys.welcomeMessage: 'Hey there, this message is coming from local defaults.',
     },
   );
+
+  Future<void> initialize() async {
+    await _setConfigSettings();
+    await _setDefaults();
+  }
 }
 
 class FirebaseRemoteConfigKeys {

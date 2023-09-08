@@ -21,7 +21,6 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
     a++;
   }
 
-  final remoteConfig = FirebaseRemoteConfigService();
 
   TextEditingController amountController = TextEditingController();
   TextEditingController percentageController = TextEditingController();
@@ -62,7 +61,7 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: secondColor),
               child: CupertinoButton(
-                onPressed: () => debugPrint(remoteConfig.getString(FirebaseRemoteConfigKeys.welcomeMessage)),
+                onPressed: () => debugPrint('s'),
                 child: SimpleText(text: 'Calculate'),
               ),
             ),
