@@ -15,11 +15,6 @@ class CalculatorPageView extends StatefulWidget {
 }
 
 class _CalculatorPageViewState extends State<CalculatorPageView> {
-  int a = 0;
-
-  void testMethod() {
-    a++;
-  }
 
 
   TextEditingController amountController = TextEditingController();

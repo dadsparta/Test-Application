@@ -9,12 +9,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final remoteConfig = FirebaseRemoteConfigService();
-  String a = remoteConfig.getString(FirebaseRemoteConfigKeys.welcomeMessage);
-  if (a != "") {
-    debugPrint(a + "sss");
-  } else {
-    debugPrint("not exist");
-  }
+  String remoteConfigCall = remoteConfig.getString(FirebaseRemoteConfigKeys.welcomeMessage);
+    debugPrint(remoteConfigCall);
+
   runApp(const MyApp());
 }
 
