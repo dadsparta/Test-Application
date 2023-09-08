@@ -15,7 +15,7 @@ class TextFieldApp extends StatelessWidget {
       decoration: const BoxDecoration(
         color: secondColor,
         borderRadius: BorderRadius.all(
-          Radius.circular(20),
+          Radius.circular(12),
         ),
       ),
     );

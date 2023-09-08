@@ -1,6 +1,8 @@
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:testapplication/utilities/consts/text_samples.dart';
+import 'package:testapplication/utilities/firebase/firebase.dart';
 
 import '../../utilities/consts/app_colors.dart';
 import '../../utilities/samples/text_field.dart';
@@ -18,6 +20,8 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
   void testMethod() {
     a++;
   }
+
+  final remoteConfig = FirebaseRemoteConfigService();
 
   TextEditingController amountController = TextEditingController();
   TextEditingController percentageController = TextEditingController();
@@ -48,7 +52,7 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
               controller: amountController,
             ),
             const SizedBox(height: 25),
-            SimpleText(text: 'interest Percentage:'),
+            SimpleText(text: 'Interest percentage:'),
             const SizedBox(height: 13),
             TextFieldApp(
               controller: percentageController,
@@ -58,7 +62,7 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: secondColor),
               child: CupertinoButton(
-                onPressed: () => testMethod(),
+                onPressed: () => debugPrint(remoteConfig.getString(FirebaseRemoteConfigKeys.welcomeMessage)),
                 child: SimpleText(text: 'Calculate'),
               ),
             ),

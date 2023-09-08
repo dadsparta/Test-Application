@@ -1,7 +1,7 @@
 name: testapplication
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -22,6 +22,9 @@ dependencies:
   in_app_review:
   onesignal_flutter: ^5.0.0
   getwidget: ^4.0.0
+  firebase_core: ^2.15.1
+  firebase_remote_config: ^4.2.5
+
 
 dev_dependencies:
   flutter_test:

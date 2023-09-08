@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import '../consts/app_colors.dart';
 
 class ListTileApp extends StatelessWidget {
-  ListTileApp({Key? key, required this.title}) : super(key: key);
+  ListTileApp({Key? key, required this.title, required this.function}) : super(key: key);
   String title;
+  Function function;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ListTileApp extends StatelessWidget {
         title,
         style: TextStyle(color: textColor),
       ),
-      onTap: (){},
+      onTap: () => function(),
     );
   }
 }

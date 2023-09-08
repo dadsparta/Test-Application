@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "494089194603",
+    "project_id": "forjustice1-ee4db",
+    "storage_bucket": "forjustice1-ee4db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494089194603:android:5944effa905dae13bcb52e",
+        "android_client_info": {
+          "package_name": "com.example.testapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494089194603-r9dd8uk5nu1flbrmdi2dmb27bgmrb38q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy_HqOy-LqJ_2kfyJYTX-4b-ZFjEsTk48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494089194603-r9dd8uk5nu1flbrmdi2dmb27bgmrb38q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
