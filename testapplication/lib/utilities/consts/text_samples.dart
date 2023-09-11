@@ -19,6 +19,7 @@ class SimpleText extends StatelessWidget {
     );
   }
 }
+
 class ArticleTitle extends StatelessWidget {
   ArticleTitle({Key? key, required this.text}) : super(key: key);
   String text;
@@ -35,13 +36,19 @@ class ArticleTitle extends StatelessWidget {
     );
   }
 }
+
 class NavBarText extends StatelessWidget {
   NavBarText({Key? key, required this.text}) : super(key: key);
   String text;
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: const TextStyle(fontSize: 28, color: textColor));
+    return Text(text,
+        style: const TextStyle(
+          fontSize: 28,
+          color: textColor,
+          decoration: TextDecoration.none,
+        ));
   }
 }
 

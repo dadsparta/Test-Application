@@ -24,22 +24,29 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor: firstColor,
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: secondColor,
-        border: const Border(bottom: BorderSide.none),
-        middle: NavBarText(text: 'Calculator'),
-      ),
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(children: [
+          padding: const EdgeInsets.all(15.0),
+          child: ListView(children: [
+            const SizedBox(
+              height: 15,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: NavBarText(text: 'Calculator'),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             SimpleText(
               text: 'Empower your '
                   'investment decisions with our Investment Calculator. '
                   'Easily calculate the potential returns on your investments by entering'
                   'the interest percentage and the initial amount.',
             ),
-            const Spacer(),
+            const SizedBox(
+              height: 50,
+            ),
             SimpleText(text: 'Amount:'),
             const SizedBox(height: 13),
             TextFieldApp(
@@ -60,7 +67,6 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
                 child: SimpleText(text: 'Calculate'),
               ),
             ),
-            const Spacer(),
           ]),
         ),
       ),

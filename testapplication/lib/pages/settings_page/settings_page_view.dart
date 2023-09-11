@@ -20,42 +20,57 @@ class _SettingsPageViewState extends State<SettingsPageView> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor: firstColor,
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: secondColor,
-        border: const Border(bottom: BorderSide.none),
-        middle: NavBarText(text: 'Settings'),
-      ),
       child: SafeArea(
-        child: CupertinoListSection.insetGrouped(
-          decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-          backgroundColor: firstColor,
-          children: [
-            ListTileApp(
-              title: 'About app',
-              function: () => Navigator.of(context).push(
-                CupertinoPageRoute(
-                  builder: (context) => const AboutApp(),
-                ),
+        child: Container(
+          height: 5000,
+          width: 5000,
+          color: firstColor,
+          child: ListView(
+            children: [
+              const SizedBox(
+                height: 30,
               ),
-            ),
-            ListTileApp(title: 'Rate app', function: () {}),
-            ListTileApp(
-              title: 'Privacy & police',
-              function: () => Navigator.of(context).push(
-                CupertinoPageRoute(
-                  builder: (context) => const PrivacyAndPolicy(),
-                ),
+              Align(
+                alignment: Alignment.center,
+                child: NavBarText(text: 'Settings'),
               ),
-            ),
-            ListTileApp(
-              title: 'Terms & Conditions',
-              function: () => Navigator.of(context).push(
-                CupertinoPageRoute(
-                  builder: (context) => const TermsAndConditions(),
-                ),
+              const SizedBox(
+                height: 30,
               ),
-            ),
-          ],
+              CupertinoListSection.insetGrouped(
+                decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                backgroundColor: firstColor,
+                children: [
+
+                  ListTileApp(
+                    title: 'About app',
+                    function: () => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                        builder: (context) => const AboutApp(),
+                      ),
+                    ),
+                  ),
+                  ListTileApp(title: 'Rate app', function: () {}),
+                  ListTileApp(
+                    title: 'Privacy & police',
+                    function: () => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                        builder: (context) => const PrivacyAndPolicy(),
+                      ),
+                    ),
+                  ),
+                  ListTileApp(
+                    title: 'Terms & Conditions',
+                    function: () => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                        builder: (context) => const TermsAndConditions(),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

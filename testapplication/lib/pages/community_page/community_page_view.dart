@@ -15,24 +15,35 @@ class _CommunityPageViewState extends State<CommunityPageView> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: secondColor,
-        middle: NavBarText(
-          text: 'Community',
-        ),
-      ),
       child: SafeArea(
         child: Container(
-          color: firstColor,
-          child: ListView.separated(
-            itemCount: CommunityConstants.communities.length,
-            padding: const EdgeInsets.all(16),
-            itemBuilder: (context, index) {
-              return Article(index: index);
-            },
-            separatorBuilder: (context, index) {
-              return const SizedBox(height: 0);
-            },
+          padding: const EdgeInsets.all(15),
+          height: 5000,
+          decoration: const BoxDecoration( color: firstColor),
+          child: ListView(
+            children: [
+              const SizedBox(height: 15,),
+              Align(
+                alignment: Alignment.center,
+                child: NavBarText(text: 'Community'),
+              ),
+              const SizedBox(height: 30,),
+              Container(
+                color: firstColor,
+                child: ListView.separated(
+                  physics: const NeverScrollableScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemCount: CommunityConstants.communities.length,
+                  itemBuilder: (context, index) {
+                    return Article(index: index);
+                  },
+                  separatorBuilder: (context, index) {
+                    return const SizedBox(height: 0);
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),

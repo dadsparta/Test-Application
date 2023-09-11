@@ -14,54 +14,73 @@ class Article extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GFCard(
-      borderRadius: BorderRadius.circular(120),
-      color: secondColor,
-      boxFit: BoxFit.cover,
-      image: Image.network(
-          'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-      title: GFListTile(
-        title: ArticleTitle(text: CommunityConstants.communities[index].title),
-        subTitle: Row(
-        children: [
-          Text(
-            "Difficulty: ",
-            style: GoogleFonts.poppins(
-              decoration: TextDecoration.none,
-              color: Colors.red,
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
+    return Container(
+      height: 335,
+      decoration: BoxDecoration(
+          color: secondColor, borderRadius: BorderRadius.circular(14)),
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 150,
+                child: Image.network(
+                    'https://phantom-marca.unidadeditorial.es/5263e9249710ee51e14b0ae6f6fd743c/resize/660/f/webp/assets/multimedia/imagenes/2022/03/05/16464909295961.jpg'),
+              ),
             ),
-          ),
-          Row(
-            children: List.generate(
-              5,
-                  (dotIndex) {
-                return Container(
-                  margin: const EdgeInsets.only(right: 4),
-                  height: 16,
-                  width: 16,
-                  decoration: BoxDecoration(
-                    color: CommunityConstants.communities[index].difficulty >
-                        dotIndex
-                        ? Colors.red
-                        : Colors.red.withOpacity(0.5),
-                    shape: BoxShape.circle,
+            Align(
+              alignment: Alignment.topLeft,
+              child: ArticleTitle(
+                  text: CommunityConstants.communities[index].title),
+            ),
+            Row(
+              children: [
+                Text(
+                  "Difficulty: ",
+                  style: GoogleFonts.poppins(
+                    decoration: TextDecoration.none,
+                    color: Colors.red,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
                   ),
-                );
-              },
+                ),
+                Row(
+                  children: List.generate(
+                    5,
+                    (dotIndex) {
+                      return Container(
+                        margin: const EdgeInsets.only(right: 4),
+                        height: 12,
+                        width: 12,
+                        decoration: BoxDecoration(
+                          color:
+                              CommunityConstants.communities[index].difficulty >
+                                      dotIndex
+                                  ? Colors.red
+                                  : Colors.red.withOpacity(0.5),
+                          shape: BoxShape.circle,
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
-      ),
-      content:
-          SimpleText(text: CommunityConstants.communities[index].description),
-      buttonBar: GFButtonBar(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.fromLTRB(13, 2, 12, 2),
-            child: Align(
+            const SizedBox(
+              height: 5,
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: SizedBox(
+                height: 66,
+                child: SimpleText(
+                    text: CommunityConstants.communities[index].description),
+              ),
+            ),
+            Align(
               alignment: Alignment.centerRight,
               child: GFButton(
                 color: secondColor,
@@ -78,8 +97,8 @@ class Article extends StatelessWidget {
                 textStyle: const TextStyle(color: textColor),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
