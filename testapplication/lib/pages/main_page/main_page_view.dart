@@ -76,30 +76,34 @@ class _MainPageViewState extends State<MainPageView> {
                         alignment: Alignment.centerRight,
                         child: SizedBox(
                           width: 50,
-                          child: Icon(Icons.question_mark,color: buttonsColor),
+                          child: Icon(Icons.question_mark, color: buttonsColor),
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 8,),
+              const SizedBox(
+                height: 8,
+              ),
               Row(
                 children: [
                   WidgetMainScreen(
                       title: 'Current date:',
                       subtitle: "$currentMonth.$currentDay.$currentYear"),
-                  const SizedBox(width: 8,),
-                  WidgetMainScreen(
-                      title: 'Strike',
-                      subtitle: "1"),
-
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  WidgetMainScreen(title: 'Strike', subtitle: "1"),
                 ],
               ),
               const SizedBox(
                 height: 15,
               ),
               const Divider(thickness: 2),
+              const SizedBox(
+                height: 15,
+              ),
               TitleText(text: 'Popular currencies:'),
               const SizedBox(
                 height: 15,
@@ -115,6 +119,9 @@ class _MainPageViewState extends State<MainPageView> {
                 separatorBuilder: (context, index) {
                   return const SizedBox(height: 16);
                 },
+              ),
+              const SizedBox(
+                height: 15,
               ),
               const Divider(thickness: 2),
               const SizedBox(
