@@ -31,7 +31,7 @@ class _MainPageViewState extends State<MainPage> {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         backgroundColor: secondColor,
-        activeColor: buttonsColor,
+        activeColor: textColor,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: "Main"),
           BottomNavigationBarItem(icon: Icon(Icons.group), label: "Community"),
