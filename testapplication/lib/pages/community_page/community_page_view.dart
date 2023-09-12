@@ -22,7 +22,7 @@ class _CommunityPageViewState extends State<CommunityPageView> {
           decoration: const BoxDecoration( color: firstColor),
           child: ListView(
             children: [
-              const SizedBox(height: 15,),
+              const SizedBox(height: 30,),
               Align(
                 alignment: Alignment.center,
                 child: NavBarText(text: 'Community'),

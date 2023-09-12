@@ -35,7 +35,7 @@ class _MainPageViewState extends State<MainPageView> {
           child: ListView(
             children: [
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
               Align(
                 alignment: Alignment.center,

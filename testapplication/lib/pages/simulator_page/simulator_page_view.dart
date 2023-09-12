@@ -27,7 +27,7 @@ class _SimulatorPageViewState extends State<SimulatorPageView> {
           child: ListView(
             children: [
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
               Align(
                 alignment: Alignment.center,
