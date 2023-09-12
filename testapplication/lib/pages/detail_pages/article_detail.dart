@@ -29,7 +29,7 @@ class ArticleDetailsPage extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             children: [
               Image.network(
-                  'https://phantom-marca.unidadeditorial.es/5263e9249710ee51e14b0ae6f6fd743c/resize/660/f/webp/assets/multimedia/imagenes/2022/03/05/16464909295961.jpg'),
+                  article.image),
               const SizedBox(height: 10),
               ArticleTitle(text: article.title),
               const SizedBox(height: 10),

@@ -28,7 +28,7 @@ class Article extends StatelessWidget {
               child: SizedBox(
                 height: 150,
                 child: Image.network(
-                    'https://phantom-marca.unidadeditorial.es/5263e9249710ee51e14b0ae6f6fd743c/resize/660/f/webp/assets/multimedia/imagenes/2022/03/05/16464909295961.jpg'),
+                CommunityConstants.communities[index].image),
               ),
             ),
             Align(
