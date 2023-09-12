@@ -15,8 +15,6 @@ class CalculatorPageView extends StatefulWidget {
 }
 
 class _CalculatorPageViewState extends State<CalculatorPageView> {
-
-
   TextEditingController amountController = TextEditingController();
   TextEditingController percentageController = TextEditingController();
 
@@ -26,7 +24,7 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
       backgroundColor: firstColor,
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
           child: ListView(children: [
             const SizedBox(
               height: 15,

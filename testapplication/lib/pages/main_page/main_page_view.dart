@@ -29,7 +29,7 @@ class _MainPageViewState extends State<MainPageView> {
     return CupertinoPageScaffold(
       child: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(14),
+          padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
           height: 5000,
           decoration: const BoxDecoration(color: firstColor),
           child: ListView(
