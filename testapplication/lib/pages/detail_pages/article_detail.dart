@@ -18,9 +18,9 @@ class ArticleDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         backgroundColor: secondColor,
-        border: const Border(bottom: BorderSide.none),
+        border: Border(bottom: BorderSide.none),
       ),
       child: SafeArea(
         child: Container(

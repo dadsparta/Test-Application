@@ -26,7 +26,7 @@ class CurrencyCard extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(14),
         decoration: const BoxDecoration(
           color: secondColor,
           borderRadius: BorderRadius.all(

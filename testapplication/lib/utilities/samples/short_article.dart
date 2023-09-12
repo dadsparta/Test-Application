@@ -17,7 +17,7 @@ class ShortArticle extends StatelessWidget {
       height: 275,
       decoration: BoxDecoration(
           color: secondColor, borderRadius: BorderRadius.circular(14)),
-      margin: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 14),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
         child: Column(
