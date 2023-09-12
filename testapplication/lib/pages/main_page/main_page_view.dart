@@ -94,7 +94,7 @@ class _MainPageViewState extends State<MainPageView> {
                   const SizedBox(
                     width: 8,
                   ),
-                  WidgetMainScreen(title: 'Strike', subtitle: "1"),
+                  WidgetMainScreen(title: 'Strike:', subtitle: "1"),
                 ],
               ),
               const SizedBox(

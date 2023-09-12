@@ -27,7 +27,7 @@ class _CalculatorPageViewState extends State<CalculatorPageView> {
           padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
           child: ListView(children: [
             const SizedBox(
-              height: 15,
+              height: 30,
             ),
             Align(
               alignment: Alignment.center,
